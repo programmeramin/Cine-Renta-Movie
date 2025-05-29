@@ -29,8 +29,13 @@ const CardDetails = ({ onClose }) => {
               Your Carts
             </h2>
             <div className="space-y-8 lg:space-y-12 max-h-[450px] overflow-auto mb-10 lg:mb-14">
-              {cartData.map((item) => (
-                <div className="grid grid-cols-[1fr_auto] gap-4">
+              {
+              
+              cartData.length === 0 ? (
+                   <p className="text-3xl">The cart is empty</p>
+              ) : 
+               cartData.map((item) => (
+                <div key={item.id} className="grid grid-cols-[1fr_auto] gap-4">
                   <div className="flex items-center gap-4">
                     <img
                       className="rounded overflow-hidden"
@@ -58,7 +63,9 @@ const CardDetails = ({ onClose }) => {
                     </button>
                   </div>
                 </div>
-              ))}
+              ))
+
+             }
             </div>
             <div className="flex items-center justify-end gap-2">
               <a
