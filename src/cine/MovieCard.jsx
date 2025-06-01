@@ -3,7 +3,7 @@ import { getImgUrl } from "../utils/cine-utility";
 import Rating from "./Rating";
 import { useState, useContext } from "react";
 import MovieDetalModal from "./MovieDetalModal";
-
+import {toast} from "react-toastify"
 import { MovieContext } from "../context";
 
 
@@ -28,9 +28,16 @@ const MovieCard = ({ movie }) => {
         payload : {
           ...movie
         }
+      });
+
+      toast.success(`Movie ${movie.title} added successfully`,{
+        position : toast.POSITION.BOTTOM_RIGHT
       })
+
     }else{
-      console.error(`The movie ${movie.title} has been added to the cart already`);
+        toast.error(`Movie ${movie.title} has been already added`,{
+        position : toast.POSITION.BOTTOM_RIGHT
+      })
       
     }
 }
@@ -74,14 +81,14 @@ const MovieCard = ({ movie }) => {
           <div className="flex items-center space-x-1 mb-5">
             <Rating value={movie.rating} />
           </div>
-          <a
+          <button
             className="bg-primary rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#171923] font-semibold text-sm"
             href="#"
             onClick={() => handleAddToCart(event, movie)}
           >
             <img src="./assets/tag.svg" alt="" />
             <span>${movie.price} | Add to Cart</span>
-          </a>
+          </button>
         </figcaption>
         </a>
       </figure>
