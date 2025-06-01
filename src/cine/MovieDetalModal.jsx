@@ -1,7 +1,7 @@
 import React from "react";
-import {getImgUrl} from "../utils/cine-utility"
+import { getImgUrl } from "../utils/cine-utility";
 
-const MovieDetalModal = ({movie, onClose, onCartAdd}) => {
+const MovieDetalModal = ({ movie, onClose, onCartAdd }) => {
   return (
     <>
       <div className="fixed top-0 left-0 w-screen h-screen z-50 bg-black/60 backdrop-blur-sm">
@@ -37,7 +37,8 @@ const MovieDetalModal = ({movie, onClose, onCartAdd}) => {
                 <a
                   className="border border-[#74766F] rounded-lg py-2 px-5 flex items-center justify-center gap-2 text-[#6F6F6F] dark:text-gray-200 font-semibold text-sm"
                   href="#"
-                onClick={onClose} >
+                  onClick={onClose}
+                >
                   Cancel
                 </a>
               </div>

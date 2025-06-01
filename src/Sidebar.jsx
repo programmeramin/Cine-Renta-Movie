@@ -72,7 +72,7 @@ const Sidebar = () => {
       </a>
     </li>
   </ul>
-</aside>
+     </aside>
 
 
     </>
