@@ -24,8 +24,7 @@ const data = [
         "description": "A trio of bodybuilders in Florida get caught up in an extortion ring and a kidnapping scheme that goes terribly wrong.",
         "genre": "Action/Comedy/Crime/Drama",
         "rating": 4,
-        "price": 100,
-        "isFavourite" : true
+        "price": 100
     },
     {
         "id": crypto.randomUUID(),

@@ -1,22 +1,7 @@
 import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
 export default defineConfig({
-
-      darkMode : "class",
-
-  theme : {
-    extend : {
-      container : {
-        center : true,
-        padding : "1.25rem"
-      },
-      colors: {
-				primary: '#00D991'
-			},
-    },
-  },
-
-  plugins: [
-    tailwindcss(),
-  ],
+  plugins: [react()],
 })
